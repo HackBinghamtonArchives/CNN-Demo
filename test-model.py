@@ -1,3 +1,10 @@
+"""
+Author: Ryan McCormick
+File : test-model.py
+Purpose: To test a trained convolutional neural network and
+	 provide visuals with matplotlib to see the success.
+"""
+
 import random
 import numpy as np
 from matplotlib import pylab as plt
