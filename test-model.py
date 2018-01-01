@@ -37,7 +37,7 @@ x_test /= 255
 test_image = x_test[image_num,:,:,:]
 test_image = np.expand_dims(test_image, axis=0)
 
-test_label = y_train[num_image]
+test_label = y_train[image_num]
 test_label = to_categorical(test_label, num_classes)
 
 # ----------------------------------------------------
