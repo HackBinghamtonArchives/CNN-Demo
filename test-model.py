@@ -37,7 +37,7 @@ x_test /= 255
 test_image = x_test[image_num,:,:,:]
 test_image = np.expand_dims(test_image, axis=0)
 
-test_label = y_train[image_num]
+test_label = y_test[image_num]
 test_label = to_categorical(test_label, num_classes)
 
 # ----------------------------------------------------
@@ -50,6 +50,9 @@ loaded_model = model_from_yaml(loaded_yaml_model)
 
 # Load weights from trained network
 loaded_model.load_weights('model_weights.h5')
+# Had to add this line with newest Keras version
+loaded_model.compile(loss='categorical_crossentropy',
+					 optimizer='sgd')
 print("Loaded model and weights from disk")
 
 prediction = loaded_model.predict(test_image, batch_size=1, verbose=1)

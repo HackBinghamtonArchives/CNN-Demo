@@ -72,4 +72,4 @@ config:
     trainable: true
     units: 10
     use_bias: true
-keras_version: 2.0.9
+keras_version: 2.1.4
