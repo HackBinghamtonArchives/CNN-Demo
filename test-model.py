@@ -34,9 +34,11 @@ y_test = to_categorical(y_test, num_classes)
 # Normalize pixel values between 0 and 1 per channel
 x_test /= 255 
 
+# Get random test image
 test_image = x_test[image_num,:,:,:]
 test_image = np.expand_dims(test_image, axis=0)
 
+# Get corresponding test label for random image
 test_label = y_test[image_num]
 test_label = to_categorical(test_label, num_classes)
 

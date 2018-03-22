@@ -21,7 +21,7 @@ config:
       config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
     kernel_regularizer: null
     kernel_size: !!python/tuple [3, 3]
-    name: conv2d_1
+    name: conv2d_4
     padding: valid
     strides: !!python/tuple [1, 1]
     trainable: true
@@ -29,13 +29,13 @@ config:
 - class_name: MaxPooling2D
   config:
     data_format: channels_last
-    name: max_pooling2d_1
+    name: max_pooling2d_4
     padding: valid
     pool_size: &id001 !!python/tuple [2, 2]
     strides: *id001
     trainable: true
 - class_name: Flatten
-  config: {name: flatten_1, trainable: true}
+  config: {name: flatten_5, trainable: true}
 - class_name: Dense
   config:
     activation: relu
@@ -50,7 +50,7 @@ config:
       class_name: VarianceScaling
       config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
     kernel_regularizer: null
-    name: dense_1
+    name: dense_6
     trainable: true
     units: 128
     use_bias: true
@@ -68,8 +68,8 @@ config:
       class_name: VarianceScaling
       config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
     kernel_regularizer: null
-    name: dense_2
+    name: dense_7
     trainable: true
     units: 10
     use_bias: true
-keras_version: 2.1.5
+keras_version: 2.1.4
