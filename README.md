@@ -6,3 +6,8 @@ Neural Networks - with MatPlotlib for visualization.
 |Anaconda3|pip|
 |---------|---|
 |conda create --name cnn --file requirements.txt | pip install -r requirements.txt|
+|source activate cnn| --- |
+
+```
+vim/gedit/nano/atom/notepad++/jupyter notebook/... train-model.py
+```
